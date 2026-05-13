@@ -123,10 +123,14 @@ export default function ThuMuaTuLanh() {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              '/images/z7820385601395_19c7302260aed622b241861b5127027a.jpg',
-              '/images/z7820385604729_b5ac5cbfce2ad60dd77957eb91537934.jpg',
-              '/images/z7820385605838_db572f81db764994166a8dab8e283903.jpg',
-              '/images/z7820385610885_86571c1fa99c92720b11574a193586a5.jpg',
+              '/images/tulanh1.png',
+              '/images/tulanh2.jpeg',
+              '/images/tulanh3.webp',
+              '/images/tulanh4.jpg',
+              '/images/tulanh5.png',
+              '/images/tulanh6.jpg',
+              '/images/tulanh7.jpg',
+              '/images/tulanh8.webp',
             ].map((image, index) => (
               <div
                 key={index}
