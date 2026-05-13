@@ -114,7 +114,7 @@ export default function Home() {
     '/images/z7820385588253_d8f26d37af7b05dacb08086c5cb456d9.jpg',
     '/images/z7820385590552_23391ae8f04cf543ca3480bb652711a4.jpg',
     '/images/z7820385599894_694c988967a17bf0c828d5d78d3573a0.jpg',
-    '/images/z7820385600109_936d5c52fb9382abf8f2f8cc19ddd97d.jpg',
+    '/images/bann1.jpg',
     '/images/z7820385601395_19c7302260aed622b241861b5127027a.jpg',
     '/images/z7820385604729_b5ac5cbfce2ad60dd77957eb91537934.jpg',
     '/images/z7820418298727_5168ba4b512c7f10442d9cccb44decb2.jpg',
