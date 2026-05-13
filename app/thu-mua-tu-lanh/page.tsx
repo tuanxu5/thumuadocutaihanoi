@@ -147,8 +147,7 @@ export default function ThuMuaTuLanh() {
                 {/* Phone number badge */}
                 <div className="absolute top-2 right-2 bg-[#155C8A] text-white px-2 py-1 rounded text-xs md:text-sm font-bold shadow-lg flex items-center gap-1">
                   <Phone className="w-3 h-3 md:w-4 md:h-4" />
-                  <span className="hidden sm:inline">0919.562.568</span>
-                  <span className="sm:hidden">Gọi ngay</span>
+                  <span className="">0919.562.568</span>
                 </div>
               </div>
             ))}
@@ -177,8 +176,7 @@ export default function ThuMuaTuLanh() {
                 {/* Phone number badge */}
                 <div className="absolute top-2 right-2 bg-[#155C8A] text-white px-2 py-1 rounded text-xs md:text-sm font-bold shadow-lg flex items-center gap-1">
                   <Phone className="w-3 h-3 md:w-4 md:h-4" />
-                  <span className="hidden sm:inline">0919.562.568</span>
-                  <span className="sm:hidden">Gọi ngay</span>
+                  <span className="">0919.562.568</span>
                 </div>
               </div>
               <div className="p-4">
@@ -197,8 +195,7 @@ export default function ThuMuaTuLanh() {
                 {/* Phone number badge */}
                 <div className="absolute top-2 right-2 bg-[#155C8A] text-white px-2 py-1 rounded text-xs md:text-sm font-bold shadow-lg flex items-center gap-1">
                   <Phone className="w-3 h-3 md:w-4 md:h-4" />
-                  <span className="hidden sm:inline">0919.562.568</span>
-                  <span className="sm:hidden">Gọi ngay</span>
+                  <span className="">0919.562.568</span>
                 </div>
               </div>
               <div className="p-4">
@@ -217,8 +214,7 @@ export default function ThuMuaTuLanh() {
                 {/* Phone number badge */}
                 <div className="absolute top-2 right-2 bg-[#155C8A] text-white px-2 py-1 rounded text-xs md:text-sm font-bold shadow-lg flex items-center gap-1">
                   <Phone className="w-3 h-3 md:w-4 md:h-4" />
-                  <span className="hidden sm:inline">0919.562.568</span>
-                  <span className="sm:hidden">Gọi ngay</span>
+                  <span className="">0919.562.568</span>
                 </div>
               </div>
               <div className="p-4">
