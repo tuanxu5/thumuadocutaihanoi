@@ -2,6 +2,7 @@
 
 import { Phone, MessageCircle, CheckCircle, DollarSign, Clock, Truck } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function ThuMuaTuLanh() {
   const handleCall = () => {
@@ -143,8 +144,88 @@ export default function ThuMuaTuLanh() {
                   className="object-cover"
                   sizes="(max-width: 768px) 50vw, 25vw"
                 />
+                {/* Phone number badge */}
+                <div className="absolute top-2 right-2 bg-[#155C8A] text-white px-2 py-1 rounded text-xs md:text-sm font-bold shadow-lg flex items-center gap-1">
+                  <Phone className="w-3 h-3 md:w-4 md:h-4" />
+                  <span className="hidden sm:inline">0919.562.568</span>
+                  <span className="sm:hidden">Gọi ngay</span>
+                </div>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* News Section */}
+        <div className="mb-8">
+          <div className="flex justify-between items-center mb-4">
+            <h2 className="text-2xl font-bold text-gray-900">
+              Tin Tức Liên Quan
+            </h2>
+            <Link href="/tin-tuc" className="text-[#155C8A] hover:text-[#0f4a6f] font-semibold text-sm">
+              Xem tất cả →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Link href="/tin-tuc" className="bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-[#155C8A] transition-colors">
+              <div className="relative aspect-video">
+                <Image
+                  src="/images/z7820385601395_19c7302260aed622b241861b5127027a.jpg"
+                  alt="Bảng giá thu mua tủ lạnh"
+                  fill
+                  className="object-cover"
+                />
+                {/* Phone number badge */}
+                <div className="absolute top-2 right-2 bg-[#155C8A] text-white px-2 py-1 rounded text-xs md:text-sm font-bold shadow-lg flex items-center gap-1">
+                  <Phone className="w-3 h-3 md:w-4 md:h-4" />
+                  <span className="hidden sm:inline">0919.562.568</span>
+                  <span className="sm:hidden">Gọi ngay</span>
+                </div>
+              </div>
+              <div className="p-4">
+                <h3 className="font-bold text-lg mb-2">Bảng Giá Thu Mua Tủ Lạnh Mới Nhất</h3>
+                <p className="text-gray-600 text-sm line-clamp-2">Cập nhật bảng giá thu mua tủ lạnh cũ các hãng nổi tiếng...</p>
+              </div>
+            </Link>
+            <Link href="/tin-tuc" className="bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-[#155C8A] transition-colors">
+              <div className="relative aspect-video">
+                <Image
+                  src="/images/z7820385575535_671afa6b62a86b35afaf3a99609fcc96.jpg"
+                  alt="Kinh nghiệm bán tủ lạnh"
+                  fill
+                  className="object-cover"
+                />
+                {/* Phone number badge */}
+                <div className="absolute top-2 right-2 bg-[#155C8A] text-white px-2 py-1 rounded text-xs md:text-sm font-bold shadow-lg flex items-center gap-1">
+                  <Phone className="w-3 h-3 md:w-4 md:h-4" />
+                  <span className="hidden sm:inline">0919.562.568</span>
+                  <span className="sm:hidden">Gọi ngay</span>
+                </div>
+              </div>
+              <div className="p-4">
+                <h3 className="font-bold text-lg mb-2">Kinh Nghiệm Bán Tủ Lạnh Cũ Giá Cao</h3>
+                <p className="text-gray-600 text-sm line-clamp-2">Chia sẻ những kinh nghiệm giúp bạn bán tủ lạnh cũ với giá cao nhất...</p>
+              </div>
+            </Link>
+            <Link href="/tin-tuc" className="bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-[#155C8A] transition-colors">
+              <div className="relative aspect-video">
+                <Image
+                  src="/images/tulanh4.jpg"
+                  alt="Chọn tủ lạnh"
+                  fill
+                  className="object-cover"
+                />
+                {/* Phone number badge */}
+                <div className="absolute top-2 right-2 bg-[#155C8A] text-white px-2 py-1 rounded text-xs md:text-sm font-bold shadow-lg flex items-center gap-1">
+                  <Phone className="w-3 h-3 md:w-4 md:h-4" />
+                  <span className="hidden sm:inline">0919.562.568</span>
+                  <span className="sm:hidden">Gọi ngay</span>
+                </div>
+              </div>
+              <div className="p-4">
+                <h3 className="font-bold text-lg mb-2">Cách Chọn Tủ Lạnh Cũ Chất Lượng</h3>
+                <p className="text-gray-600 text-sm line-clamp-2">Hướng dẫn chi tiết cách chọn mua tủ lạnh cũ còn tốt...</p>
+              </div>
+            </Link>
           </div>
         </div>
 

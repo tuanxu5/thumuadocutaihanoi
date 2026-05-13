@@ -122,6 +122,12 @@ export default function Home() {
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
+                  {/* Phone number badge */}
+                  <div className="absolute top-2 right-2 bg-[#155C8A] text-white px-2 py-1 rounded text-xs md:text-sm font-bold shadow-lg flex items-center gap-1">
+                    <Phone className="w-3 h-3 md:w-4 md:h-4" />
+                    <span className="hidden sm:inline">0919.562.568</span>
+                    <span className="sm:hidden">Gọi ngay</span>
+                  </div>
                 </div>
                 <div className="p-4">
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
@@ -183,7 +189,7 @@ export default function Home() {
             {images.map((image, index) => (
               <div
                 key={index}
-                className="relative aspect-square rounded-lg overflow-hidden border border-gray-200"
+                className="relative aspect-square rounded-lg overflow-hidden border border-gray-200 group"
               >
                 <Image
                   src={image}
@@ -192,6 +198,12 @@ export default function Home() {
                   className="object-cover"
                   sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
                 />
+                {/* Phone number badge */}
+                <div className="absolute top-2 right-2 bg-[#155C8A] text-white px-2 py-1 rounded text-xs md:text-sm font-bold shadow-lg flex items-center gap-1">
+                  <Phone className="w-3 h-3 md:w-4 md:h-4" />
+                  <span className="hidden sm:inline">0919.562.568</span>
+                  <span className="sm:hidden">Gọi ngay</span>
+                </div>
               </div>
             ))}
           </div>
@@ -303,6 +315,12 @@ export default function Home() {
                   fill
                   className="object-cover"
                 />
+                {/* Phone number badge */}
+                <div className="absolute top-2 right-2 bg-[#155C8A] text-white px-2 py-1 rounded text-xs md:text-sm font-bold shadow-lg flex items-center gap-1">
+                  <Phone className="w-3 h-3 md:w-4 md:h-4" />
+                  <span className="hidden sm:inline">0919.562.568</span>
+                  <span className="sm:hidden">Gọi ngay</span>
+                </div>
               </div>
               <div className="p-4">
                 <h3 className="font-bold text-lg mb-2">Bảng Giá Thu Mua Điều Hòa Cũ Tháng 5/2026</h3>
@@ -317,6 +335,12 @@ export default function Home() {
                   fill
                   className="object-cover"
                 />
+                {/* Phone number badge */}
+                <div className="absolute top-2 right-2 bg-[#155C8A] text-white px-2 py-1 rounded text-xs md:text-sm font-bold shadow-lg flex items-center gap-1">
+                  <Phone className="w-3 h-3 md:w-4 md:h-4" />
+                  <span className="hidden sm:inline">0919.562.568</span>
+                  <span className="sm:hidden">Gọi ngay</span>
+                </div>
               </div>
               <div className="p-4">
                 <h3 className="font-bold text-lg mb-2">Kinh Nghiệm Bán Tủ Lạnh Cũ Giá Cao</h3>
@@ -331,6 +355,12 @@ export default function Home() {
                   fill
                   className="object-cover"
                 />
+                {/* Phone number badge */}
+                <div className="absolute top-2 right-2 bg-[#155C8A] text-white px-2 py-1 rounded text-xs md:text-sm font-bold shadow-lg flex items-center gap-1">
+                  <Phone className="w-3 h-3 md:w-4 md:h-4" />
+                  <span className="hidden sm:inline">0919.562.568</span>
+                  <span className="sm:hidden">Gọi ngay</span>
+                </div>
               </div>
               <div className="p-4">
                 <h3 className="font-bold text-lg mb-2">Top 5 Thương Hiệu Điều Hòa Giữ Giá Nhất</h3>
@@ -390,28 +420,6 @@ export default function Home() {
               <MessageCircle className="w-5 h-5" />
               Chat Zalo Ngay
             </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Working Hours */}
-      <section className="py-6 bg-gray-900 text-white">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-center items-center gap-6 text-center md:text-left">
-            <div className="flex items-center gap-3">
-              <Clock className="w-6 h-6" />
-              <div>
-                <p className="font-semibold">Giờ Làm Việc</p>
-                <p className="text-sm">8:00 - 20:00 (Cả tuần)</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <Phone className="w-6 h-6" />
-              <div>
-                <p className="font-semibold">Hotline</p>
-                <p className="text-xl font-bold">0919.562.568</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
