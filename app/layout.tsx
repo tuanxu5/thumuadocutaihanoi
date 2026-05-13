@@ -11,8 +11,13 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Thu Mua Đồ Cũ Tại Hà Nội - Giá Cao - Uy Tín",
-  description: "Dịch vụ thu mua đồ cũ tại Hà Nội với giá cao nhất thị trường. Thu mua tận nơi, thanh toán ngay. Hotline: 0919.562.568",
+  title: "Phú Gia - Thu Mua Đồ Cũ Hà Nội - Giá Cao - Uy Tín",
+  description: "Phú Gia - Dịch vụ thu mua đồ cũ tại Hà Nội với giá cao nhất thị trường. Thu mua tận nơi, thanh toán ngay. Hotline: 0919.562.568",
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
 };
 
 export default function RootLayout({

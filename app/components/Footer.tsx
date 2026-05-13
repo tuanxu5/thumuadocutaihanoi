@@ -16,11 +16,11 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
           <div>
-            <h3 className="text-xl font-bold mb-4 text-red-500">
-              THU MUA ĐỒ CŨ HÀ NỘI
+            <h3 className="text-xl font-bold mb-4 text-[#51a2ff]">
+              Phú Gia
             </h3>
             <p className="text-gray-400 mb-4">
-              Dịch vụ thu mua đồ cũ uy tín, giá cao nhất thị trường tại Hà Nội.
+              Thu mua đồ cũ Hà Nội - Dịch vụ uy tín, giá cao nhất thị trường.
             </p>
             <div className="flex items-center gap-2 text-gray-400 mb-2">
               <Clock className="w-5 h-5" />
@@ -73,7 +73,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm text-center md:text-left">
-              &copy; 2026 Thu Mua Đồ Cũ Hà Nội. All rights reserved.
+              &copy; 2026 Phú Gia - Thu Mua Đồ Cũ Hà Nội. All rights reserved.
             </p>
             <div className="flex gap-4 text-sm">
               <Link href="/gioi-thieu" className="text-gray-400 hover:text-white transition-colors">
