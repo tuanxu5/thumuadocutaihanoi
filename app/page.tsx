@@ -33,9 +33,27 @@ export default function Home() {
       link: '/lien-he'
     },
     { 
-      image: '/images/cate/tivi.webp',
+      image: '/images/cate/tivi.jpg',
       title: 'Tivi & Điện Tử', 
       desc: 'Smart TV, loa, amply, đầu karaoke...',
+      link: '/lien-he'
+    },
+    { 
+      image: '/images/cate/tubep.jpg',
+      title: 'Tủ Bếp', 
+      desc: 'Tủ bếp gỗ, tủ bếp inox, tủ bếp cũ...',
+      link: '/lien-he'
+    },
+    { 
+      image: '/images/cate/sango.jpg',
+      title: 'Sàn Gỗ', 
+      desc: 'Sàn gỗ công nghiệp, sàn gỗ tự nhiên...',
+      link: '/lien-he'
+    },
+    { 
+      image: '/images/cate/chaurua.jpg',
+      title: 'Chậu Rửa', 
+      desc: 'Chậu rửa inox, chậu rửa đá, lavabo...',
       link: '/lien-he'
     },
   ];
@@ -121,7 +139,7 @@ export default function Home() {
           <h2 className="text-2xl md:text-4xl font-bold text-center mb-6 text-gray-900">
             Dịch Vụ Thu Mua
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
             {services.map((service, index) => (
               <Link
                 key={index}
@@ -134,14 +152,20 @@ export default function Home() {
                     alt={service.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
                   />
+                  {/* Phone number badge */}
+                  <div className="absolute top-2 right-2 bg-[#155C8A] text-white px-2 py-1 rounded text-xs md:text-sm font-bold shadow-lg flex items-center gap-1">
+                    <Phone className="w-3 h-3 md:w-4 md:h-4" />
+                    <span className="hidden sm:inline">0919.562.568</span>
+                    <span className="sm:hidden">Gọi ngay</span>
+                  </div>
                 </div>
-                <div className="p-4 text-center">
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                <div className="p-3 md:p-4 text-center">
+                  <h3 className="text-base md:text-lg font-bold text-gray-900 mb-1 md:mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-gray-600">{service.desc}</p>
+                  <p className="text-xs md:text-sm text-gray-600">{service.desc}</p>
                 </div>
               </Link>
             ))}
