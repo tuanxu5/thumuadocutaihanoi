@@ -1,6 +1,7 @@
 'use client';
 
-import { Phone, MessageCircle, MapPin, Clock, Mail } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, Clock } from 'lucide-react';
+import Image from 'next/image';
 
 export default function LienHe() {
   const handleCall = () => {
@@ -12,36 +13,49 @@ export default function LienHe() {
   };
 
   const locations = [
-    { 
-      name: 'Cơ Sở 1', 
+    {
+      name: 'Cơ Sở 1',
       address: '302 Dương Văn Bé, Hà Nội',
     },
-    { 
-      name: 'Cơ Sở 2', 
+    {
+      name: 'Cơ Sở 2',
       address: 'Nhà số 50 ngõ 46 Quan Nhân, Hà Nội',
     },
-    { 
-      name: 'Cơ Sở 3', 
+    {
+      name: 'Cơ Sở 3',
       address: 'Số 58 Xuân Đỉnh, Hà Nội',
     },
-    { 
-      name: 'Cơ Sở 4', 
+    {
+      name: 'Cơ Sở 4',
       address: 'Ngõ 268 nhà số 6 Nguyễn Văn Cừ, Hà Nội',
     },
   ];
 
   return (
-    <div className="bg-gray-50 min-h-screen py-8">
-      <div className="container mx-auto px-4">
-        {/* Page Title */}
-        <div className="text-center mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-            Liên Hệ Với Chúng Tôi
-          </h1>
-          <p className="text-gray-600">
-            Chúng tôi luôn sẵn sàng tư vấn và hỗ trợ bạn
-          </p>
+    <div className="bg-gray-50 min-h-screen">
+      {/* Hero Banner */}
+      <div className="w-full h-64 md:h-80 relative overflow-hidden">
+        <Image
+          src="/sub-banner.jpg"
+          alt="Liên Hệ Với Chúng Tôi"
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+          <div className="text-center text-white px-4">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              Liên Hệ Với Chúng Tôi
+            </h1>
+            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+              Chúng tôi luôn sẵn sàng tư vấn và hỗ trợ bạn
+            </p>
+          </div>
         </div>
+      </div>
+
+      <div className="container mx-auto px-4 py-8">
 
         {/* Contact Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">

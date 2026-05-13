@@ -1,5 +1,7 @@
 'use client';
 
+export const runtime = 'edge';
+
 import { Phone, MessageCircle, Calendar, Tag, ArrowLeft, Share2, Clock, User } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';

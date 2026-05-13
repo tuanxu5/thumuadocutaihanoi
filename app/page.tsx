@@ -90,49 +90,22 @@ export default function Home() {
   return (
     <div className="bg-white">
       {/* Hero Banner */}
-      <section className="relative">
-        <div className="relative w-full h-[400px] md:h-[500px]">
+      <section className="relative w-full">
+        <div className="relative w-full aspect-[16/9] md:aspect-[21/9]">
           <Image
             src="/banner.png"
             alt="Phú Gia - Thu Mua Đồ Cũ Hà Nội"
             fill
-            className="object-cover"
+            className="object-fill"
             priority
           />
-          <div className="absolute inset-0 bg-black/30"></div>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center text-white px-4">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
-                PHÚ GIA - THU MUA ĐỒ CŨ HÀ NỘI
-              </h1>
-              <p className="text-base md:text-lg mb-6">
-                Giá Cao - Uy Tín - Nhanh Chóng
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                  onClick={handleCall}
-                  className="flex items-center justify-center gap-2 bg-[#155C8A] hover:bg-[#0f4a6f] text-white px-8 py-3 rounded font-bold transition-colors"
-                >
-                  <Phone className="w-5 h-5" />
-                  0919.562.568
-                </button>
-                <button
-                  onClick={handleZalo}
-                  className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded font-bold transition-colors"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  Chat Zalo
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
       {/* Benefits Section */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-900">
+          <h2 className="text-2xl md:text-4xl font-bold text-center mb-6 text-gray-900">
             Tại Sao Chọn Chúng Tôi?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -155,7 +128,7 @@ export default function Home() {
       {/* Services Section */}
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-900">
+          <h2 className="text-2xl md:text-4xl font-bold text-center mb-6 text-gray-900">
             Dịch Vụ Thu Mua
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -165,7 +138,7 @@ export default function Home() {
                 href={service.link}
                 className="bg-white rounded-lg p-6 border border-gray-200 hover:border-[#155C8A] transition-colors"
               >
-                <div className="flex items-start gap-4 mb-4">
+                <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-[#155C8A] rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
@@ -174,10 +147,10 @@ export default function Home() {
                       {service.title}
                     </h3>
                     <p className="text-sm text-gray-600 mb-2">{service.desc}</p>
-                    <div className="inline-flex items-center gap-1 bg-green-100 text-green-700 px-3 py-1 rounded text-sm font-semibold">
+                    {/* <div className="inline-flex items-center gap-1 bg-green-100 text-green-700 px-3 py-1 rounded text-sm font-semibold">
                       <DollarSign className="w-4 h-4" />
                       {service.price}
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </Link>
@@ -189,7 +162,7 @@ export default function Home() {
       {/* Gallery Section */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-900">
+          <h2 className="text-2xl md:text-4xl font-bold text-center mb-6 text-gray-900">
             Hình Ảnh Thực Tế
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -211,10 +184,145 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Process Section */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-center mb-6 text-gray-900">
+            Quy Trình Thanh Lý Thu Mua Đồ Cũ
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="bg-white p-6 rounded-lg border border-gray-200 text-center">
+              <div className="w-16 h-16 bg-[#155C8A] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                1
+              </div>
+              <h3 className="font-bold text-lg mb-2">Liên Hệ</h3>
+              <p className="text-gray-600 text-sm">Gọi điện hoặc nhắn Zalo cho chúng tôi</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg border border-gray-200 text-center">
+              <div className="w-16 h-16 bg-[#155C8A] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                2
+              </div>
+              <h3 className="font-bold text-lg mb-2">Đến Tận Nơi</h3>
+              <p className="text-gray-600 text-sm">Nhân viên đến kiểm tra trong 30 phút</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg border border-gray-200 text-center">
+              <div className="w-16 h-16 bg-[#155C8A] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                3
+              </div>
+              <h3 className="font-bold text-lg mb-2">Định Giá</h3>
+              <p className="text-gray-600 text-sm">Báo giá miễn phí, công khai minh bạch</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg border border-gray-200 text-center">
+              <div className="w-16 h-16 bg-[#155C8A] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                4
+              </div>
+              <h3 className="font-bold text-lg mb-2">Thanh Toán</h3>
+              <p className="text-gray-600 text-sm">Đồng ý giá, thanh toán ngay tại chỗ</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Commitment Section */}
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-center mb-6 text-gray-900">
+            Cam Kết Của Chúng Tôi
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="bg-white p-6 rounded-lg border border-gray-200">
+              <div className="flex items-start gap-4">
+                <CheckCircle className="w-8 h-8 text-[#155C8A] flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-bold text-lg mb-2">Giá Cao Nhất Thị Trường</h3>
+                  <p className="text-gray-600 text-sm">Cam kết mua với giá cao hơn thị trường 10-20%, định giá công bằng và minh bạch</p>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white p-6 rounded-lg border border-gray-200">
+              <div className="flex items-start gap-4">
+                <CheckCircle className="w-8 h-8 text-[#155C8A] flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-bold text-lg mb-2">Thanh Toán Ngay</h3>
+                  <p className="text-gray-600 text-sm">Thanh toán bằng tiền mặt ngay tại chỗ, không chậm trễ, không phí ẩn</p>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white p-6 rounded-lg border border-gray-200">
+              <div className="flex items-start gap-4">
+                <CheckCircle className="w-8 h-8 text-[#155C8A] flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-bold text-lg mb-2">Dịch Vụ Tận Tâm</h3>
+                  <p className="text-gray-600 text-sm">Đội ngũ chuyên nghiệp, nhiệt tình, hỗ trợ tháo lắp và vận chuyển miễn phí</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* News Section */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center mb-6">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900">
+              Tin Tức
+            </h2>
+            <Link href="/tin-tuc" className="text-[#155C8A] hover:text-[#0f4a6f] font-semibold">
+              Xem tất cả →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Link href="/tin-tuc" className="bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-[#155C8A] transition-colors">
+              <div className="relative aspect-video">
+                <Image
+                  src="/images/z7820385588253_d8f26d37af7b05dacb08086c5cb456d9.jpg"
+                  alt="Bảng giá thu mua"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="font-bold text-lg mb-2">Bảng Giá Thu Mua Điều Hòa Cũ Tháng 5/2026</h3>
+                <p className="text-gray-600 text-sm line-clamp-2">Cập nhật bảng giá thu mua điều hòa cũ mới nhất tháng 5/2026...</p>
+              </div>
+            </Link>
+            <Link href="/tin-tuc" className="bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-[#155C8A] transition-colors">
+              <div className="relative aspect-video">
+                <Image
+                  src="/images/z7820385601395_19c7302260aed622b241861b5127027a.jpg"
+                  alt="Kinh nghiệm bán tủ lạnh"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="font-bold text-lg mb-2">Kinh Nghiệm Bán Tủ Lạnh Cũ Giá Cao</h3>
+                <p className="text-gray-600 text-sm line-clamp-2">Chia sẻ những kinh nghiệm giúp bạn bán tủ lạnh cũ với giá cao nhất...</p>
+              </div>
+            </Link>
+            <Link href="/tin-tuc" className="bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-[#155C8A] transition-colors">
+              <div className="relative aspect-video">
+                <Image
+                  src="/images/z7820385590552_23391ae8f04cf543ca3480bb652711a4.jpg"
+                  alt="Thương hiệu điều hòa"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="font-bold text-lg mb-2">Top 5 Thương Hiệu Điều Hòa Giữ Giá Nhất</h3>
+                <p className="text-gray-600 text-sm line-clamp-2">Những thương hiệu điều hòa nào giữ giá tốt nhất khi bán lại...</p>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Locations Section */}
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-900">
+          <h2 className="text-2xl md:text-4xl font-bold text-center mb-6 text-gray-900">
             Hệ Thống Cơ Sở
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">

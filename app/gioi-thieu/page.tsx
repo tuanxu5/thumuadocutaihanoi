@@ -39,17 +39,29 @@ export default function GioiThieu() {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-[#155C8A] text-white py-12">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">
-            Về Chúng Tôi
-          </h1>
-          <p className="text-lg text-white/90 max-w-2xl mx-auto">
-            Với hơn 15 năm kinh nghiệm trong lĩnh vực thu mua đồ cũ, chúng tôi tự hào là đơn vị uy tín hàng đầu tại Hà Nội
-          </p>
+      {/* Hero Banner */}
+      <div className="w-full h-64 md:h-80 relative overflow-hidden">
+        <Image
+          src="/sub-banner.jpg"
+          alt="Giới Thiệu - Phú Gia"
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+          <div className="text-center text-white px-4">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              Giới Thiệu Về Phú Gia
+            </h1>
+            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+              Hơn 15 năm kinh nghiệm trong lĩnh vực thu mua đồ cũ tại Hà Nội
+              <br />
+              Uy tín - Chuyên nghiệp - Giá cao nhất thị trường
+            </p>
+          </div>
         </div>
-      </section>
+      </div>
 
       <div className="container mx-auto px-4 py-8">
         {/* Stats Section */}

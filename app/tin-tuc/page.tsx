@@ -68,22 +68,35 @@ export default function TinTuc() {
     'Thị Trường',
   ];
 
-  const filteredArticles = selectedCategory === 'Tất Cả' 
-    ? articles 
+  const filteredArticles = selectedCategory === 'Tất Cả'
+    ? articles
     : articles.filter(article => article.category === selectedCategory);
 
   return (
-    <div className="bg-gray-50 min-h-screen py-8">
-      <div className="container mx-auto px-4">
-        {/* Page Title */}
-        <div className="text-center mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-            Tin Tức & Kiến Thức
-          </h1>
-          <p className="text-gray-600">
-            Cập nhật tin tức, bảng giá và kiến thức hữu ích về thu mua đồ cũ
-          </p>
+    <div className="bg-gray-50 min-h-screen">
+      {/* Hero Banner */}
+      <div className="w-full h-64 md:h-80 relative overflow-hidden">
+        <Image
+          src="/sub-banner.jpg"
+          alt="Tin Tức & Kiến Thức"
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+          <div className="text-center text-white px-4">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              Tin Tức & Kiến Thức
+            </h1>
+            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+              Cập nhật tin tức, bảng giá và kiến thức hữu ích về thu mua đồ cũ
+            </p>
+          </div>
         </div>
+      </div>
+
+      <div className="container mx-auto px-4 py-8">
 
         {/* Categories */}
         <div className="flex flex-wrap gap-2 justify-center mb-8">
@@ -91,11 +104,10 @@ export default function TinTuc() {
             <button
               key={index}
               onClick={() => setSelectedCategory(category)}
-              className={`px-4 py-2 rounded font-medium transition-colors ${
-                selectedCategory === category
+              className={`px-4 py-2 rounded font-medium transition-colors ${selectedCategory === category
                   ? 'bg-[#155C8A] text-white'
                   : 'bg-white text-gray-700 border border-gray-200 hover:border-[#155C8A] hover:text-[#155C8A]'
-              }`}
+                }`}
             >
               {category}
             </button>
@@ -148,42 +160,42 @@ export default function TinTuc() {
         {filteredArticles.length > 1 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredArticles.slice(1).map((article) => (
-            <div
-              key={article.id}
-              className="bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-[#155C8A] transition-colors"
-            >
-              <div className="relative aspect-video overflow-hidden">
-                <Image
-                  src={article.image}
-                  alt={article.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-5">
-                <div className="flex items-center gap-3 mb-3 text-xs text-gray-600">
-                  <span className="flex items-center gap-1">
-                    <Calendar className="w-3 h-3" />
-                    {article.date}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Tag className="w-3 h-3" />
-                    {article.category}
-                  </span>
+              <div
+                key={article.id}
+                className="bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-[#155C8A] transition-colors"
+              >
+                <div className="relative aspect-video overflow-hidden">
+                  <Image
+                    src={article.image}
+                    alt={article.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
-                  {article.title}
-                </h3>
-                <p className="text-gray-600 mb-4 line-clamp-3 text-sm leading-relaxed">
-                  {article.excerpt}
-                </p>
-                <button className="text-[#155C8A] hover:text-[#0f4a6f] font-semibold text-sm">
-                  Đọc Thêm →
-                </button>
+                <div className="p-5">
+                  <div className="flex items-center gap-3 mb-3 text-xs text-gray-600">
+                    <span className="flex items-center gap-1">
+                      <Calendar className="w-3 h-3" />
+                      {article.date}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Tag className="w-3 h-3" />
+                      {article.category}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
+                    {article.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4 line-clamp-3 text-sm leading-relaxed">
+                    {article.excerpt}
+                  </p>
+                  <button className="text-[#155C8A] hover:text-[#0f4a6f] font-semibold text-sm">
+                    Đọc Thêm →
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
         ) : filteredArticles.length === 0 ? (
           <div className="text-center py-12">
             <p className="text-gray-500 text-lg">Không có bài viết nào trong danh mục này.</p>

@@ -1,6 +1,6 @@
 'use client';
 
-import { Phone, MessageCircle, Refrigerator, CheckCircle, DollarSign, Clock, Truck } from 'lucide-react';
+import { Phone, MessageCircle, CheckCircle, DollarSign, Clock, Truck } from 'lucide-react';
 import Image from 'next/image';
 
 export default function ThuMuaTuLanh() {
@@ -32,38 +32,29 @@ export default function ThuMuaTuLanh() {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-[#155C8A] text-white py-12">
-        <div className="container mx-auto px-4 text-center">
-          <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mb-4 mx-auto">
-            <Refrigerator className="w-8 h-8 text-white" />
-          </div>
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">
-            Thu Mua Tủ Lạnh Cũ
-          </h1>
-          <p className="text-lg text-white/90 mb-6 max-w-2xl mx-auto">
-            Chúng tôi thu mua mọi loại tủ lạnh cũ, hỏng, các thương hiệu nổi tiếng
-            <br />
-            Đến tận nơi - Định giá miễn phí - Thanh toán ngay
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              onClick={handleCall}
-              className="flex items-center justify-center gap-2 bg-white text-[#155C8A] px-8 py-3 rounded font-bold hover:bg-gray-100 transition-colors"
-            >
-              <Phone className="w-5 h-5" />
-              0919.562.568
-            </button>
-            <button
-              onClick={handleZalo}
-              className="flex items-center justify-center gap-2 bg-green-500 text-white px-8 py-3 rounded font-bold hover:bg-green-600 transition-colors"
-            >
-              <MessageCircle className="w-5 h-5" />
-              Chat Zalo
-            </button>
+      {/* Hero Banner */}
+      <div className="w-full h-64 md:h-80 relative overflow-hidden">
+        <Image
+          src="/sub-banner.jpg"
+          alt="Thu Mua Tủ Lạnh Cũ"
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+          <div className="text-center text-white px-4">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              Thu Mua Tủ Lạnh Cũ
+            </h1>
+            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+              Chúng tôi thu mua mọi loại tủ lạnh cũ, hỏng, các thương hiệu nổi tiếng
+              <br />
+              Đến tận nơi - Định giá miễn phí - Thanh toán ngay
+            </p>
           </div>
         </div>
-      </section>
+      </div>
 
       <div className="container mx-auto px-4 py-8">
         {/* Benefits Section */}

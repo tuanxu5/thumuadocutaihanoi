@@ -35,9 +35,9 @@ export default function Header() {
             <Image
               src="/logo.png"
               alt="Phú Gia"
-              width={50}
-              height={50}
-              className="object-contain"
+              width={60}
+              height={60}
+              className="object-fill w-16 h-16"
               priority
             />
             <div>
@@ -49,7 +49,7 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-3">
             <button
               onClick={handleCall}
-              className="flex items-center gap-2 bg-[#155C8A] hover:bg-[#0f4a6f] text-white px-5 py-4 rounded-lg font-bold transition-colors"
+              className="flex items-center gap-2 bg-[#155C8A] hover:bg-[#0f2d6f] text-white px-5 py-3 rounded font-bold transition-colors"
             >
               <Phone className="w-5 h-5" />
               <div className="text-left">
@@ -58,7 +58,7 @@ export default function Header() {
             </button>
             <button
               onClick={handleZalo}
-              className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-4 rounded-lg font-bold transition-colors"
+              className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded font-bold transition-colors"
             >
               <MessageCircle className="w-5 h-5" />
               <span>Chat Zalo</span>
