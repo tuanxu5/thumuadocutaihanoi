@@ -28,97 +28,108 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className="bg-white sticky top-0 z-50 shadow-md">
       <div className="container mx-auto px-4">
-        {/* Top Row */}
         <div className="flex justify-between items-center py-3 border-b border-gray-100">
-          {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="relative w-11 h-11 flex-shrink-0">
-              <Image
-                src="/logo.png"
-                alt="Phú Gia Logo"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
+            <Image
+              src="/logo.png"
+              alt="Phú Gia"
+              width={50}
+              height={50}
+              className="object-contain"
+              priority
+            />
             <div>
-              <h1 className="text-xl font-bold text-gray-900">Phú Gia</h1>
-              <p className="text-xs text-[#51a2ff] font-semibold">Thu Mua Đồ Cũ Hà Nội</p>
+              <h1 className="text-2xl font-bold text-[#155C8A]">PHÚ GIA</h1>
+              <p className="text-sm text-gray-600">Thu Mua Đồ Cũ Hà Nội</p>
             </div>
           </Link>
 
-          {/* CTA Buttons */}
-          <div className="flex items-center gap-2">
+          <div className="hidden md:flex items-center gap-3">
             <button
               onClick={handleCall}
-              className="flex items-center gap-2 bg-gradient-to-r from-[#51a2ff] to-[#3b8eef] hover:from-[#3b8eef] hover:to-[#2a7edf] text-white px-5 py-2.5 rounded-full font-bold text-sm transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="flex items-center gap-2 bg-[#155C8A] hover:bg-[#0f4a6f] text-white px-5 py-4 rounded-lg font-bold transition-colors"
             >
-              <Phone className="w-4 h-4" />
-              <span className="hidden sm:inline">0919.562.568</span>
+              <Phone className="w-5 h-5" />
+              <div className="text-left">
+                <div>0919.562.568</div>
+              </div>
             </button>
             <button
               onClick={handleZalo}
-              className="hidden md:flex items-center gap-2 bg-white border-2 border-[#51a2ff] text-[#51a2ff] hover:bg-[#51a2ff] hover:text-white px-5 py-2.5 rounded-full font-bold text-sm transition-all transform hover:scale-105"
+              className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-4 rounded-lg font-bold transition-colors"
             >
-              <MessageCircle className="w-4 h-4" />
-              <span>Zalo</span>
+              <MessageCircle className="w-5 h-5" />
+              <span>Chat Zalo</span>
             </button>
           </div>
+
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 text-[#155C8A]"
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
+      </div>
 
-        {/* Bottom Row - Navigation */}
-        <div className="py-2.5">
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center justify-center gap-1">
+      {/* Navigation with full width background */}
+      <nav className="bg-[#155C8A]">
+        <div className="container mx-auto px-4">
+          <ul className="hidden md:flex items-center">
             {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`px-5 py-2 rounded-full font-medium text-sm transition-all ${
-                  pathname === item.href
-                    ? 'bg-gradient-to-r from-[#51a2ff] to-[#3b8eef] text-white shadow-md'
-                    : 'text-gray-700 hover:bg-blue-50 hover:text-[#51a2ff]'
-                }`}
-              >
-                {item.label}
-              </Link>
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className={`block px-6 py-3 font-medium transition-colors ${
+                    pathname === item.href
+                      ? 'text-white bg-[#0f4a6f]'
+                      : 'text-white/90 hover:text-white hover:bg-[#0f4a6f]'
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              </li>
             ))}
-          </nav>
+          </ul>
 
-          {/* Mobile Menu Button */}
-          <div className="lg:hidden flex justify-center">
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="flex items-center gap-2 bg-gradient-to-r from-[#51a2ff] to-[#3b8eef] text-white px-6 py-2 rounded-full font-medium text-sm shadow-lg"
-            >
-              {mobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
-              <span>Menu</span>
-            </button>
-          </div>
-
-          {/* Mobile Menu Dropdown */}
           {mobileMenuOpen && (
-            <div className="lg:hidden mt-3 bg-gray-50 rounded-2xl overflow-hidden shadow-lg">
+            <div className="md:hidden py-2">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`block px-5 py-3 font-medium text-sm transition-all ${
+                  className={`block px-4 py-3 font-medium transition-colors ${
                     pathname === item.href
-                      ? 'bg-gradient-to-r from-[#51a2ff] to-[#3b8eef] text-white'
-                      : 'text-gray-700 hover:bg-blue-50 hover:text-[#51a2ff]'
+                      ? 'text-white bg-[#0f4a6f]'
+                      : 'text-white/90 hover:text-white hover:bg-[#0f4a6f]'
                   }`}
                 >
                   {item.label}
                 </Link>
               ))}
+              <div className="px-4 py-3 space-y-2 border-t border-white/20 mt-2">
+                <button
+                  onClick={handleCall}
+                  className="w-full flex items-center justify-center gap-2 bg-white text-[#155C8A] px-4 py-3 rounded font-bold"
+                >
+                  <Phone className="w-5 h-5" />
+                  <span>0919.562.568</span>
+                </button>
+                <button
+                  onClick={handleZalo}
+                  className="w-full flex items-center justify-center gap-2 bg-green-500 text-white px-4 py-3 rounded font-bold"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  <span>Chat Zalo</span>
+                </button>
+              </div>
             </div>
           )}
         </div>
-      </div>
+      </nav>
     </header>
   );
 }
