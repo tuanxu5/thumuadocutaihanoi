@@ -1,6 +1,6 @@
 'use client';
 
-import { Phone, MessageCircle, MapPin, Clock, CheckCircle, DollarSign, Zap, Shield, Wind, Refrigerator, Smartphone, Laptop, Tv, WashingMachine } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, Clock, CheckCircle } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -15,54 +15,36 @@ export default function Home() {
 
   const services = [
     { 
-      icon: Wind, 
+      image: '/images/cate/dieuhoa.jpeg',
       title: 'Điều Hòa', 
       desc: 'Daikin, Panasonic, Mitsubishi, LG...',
-      price: 'Từ 500k - 15tr',
       link: '/thu-mua-dieu-hoa'
     },
     { 
-      icon: Refrigerator, 
+      image: '/images/cate/tulanh.jpeg',
       title: 'Tủ Lạnh', 
       desc: 'Samsung, LG, Panasonic, Toshiba...',
-      price: 'Từ 300k - 20tr',
       link: '/thu-mua-tu-lanh'
     },
     { 
-      icon: WashingMachine, 
+      image: '/images/cate/maygiat.jpeg',
       title: 'Máy Giặt', 
       desc: 'Electrolux, Samsung, LG, Aqua...',
-      price: 'Từ 200k - 10tr',
       link: '/lien-he'
     },
     { 
-      icon: Smartphone, 
-      title: 'Điện Thoại', 
-      desc: 'iPhone, Samsung, Oppo, Xiaomi...',
-      price: 'Từ 100k - 30tr',
-      link: '/lien-he'
-    },
-    { 
-      icon: Laptop, 
-      title: 'Laptop', 
-      desc: 'Macbook, Dell, HP, Asus, Lenovo...',
-      price: 'Từ 500k - 50tr',
-      link: '/lien-he'
-    },
-    { 
-      icon: Tv, 
+      image: '/images/cate/tivi.webp',
       title: 'Tivi & Điện Tử', 
       desc: 'Smart TV, loa, amply, đầu karaoke...',
-      price: 'Từ 300k - 25tr',
       link: '/lien-he'
     },
   ];
 
   const benefits = [
-    { icon: DollarSign, title: 'Giá Cao Nhất', desc: 'Cam kết mua với giá cao hơn thị trường' },
-    { icon: Zap, title: 'Nhanh Chóng', desc: 'Đến tận nơi trong 30 phút, xử lý ngay' },
-    { icon: Shield, title: 'Uy Tín', desc: 'Hơn 15 năm kinh nghiệm, 10,000+ khách hàng' },
-    { icon: CheckCircle, title: 'Minh Bạch', desc: 'Định giá công khai, thanh toán ngay' },
+    { image: '/images/z7820385569389_2fd7298c2a7516caa686ec5cc22c18d8.jpg', title: 'Giá Cao Nhất', desc: 'Cam kết mua với giá cao hơn thị trường' },
+    { image: '/images/z7820385575535_671afa6b62a86b35afaf3a99609fcc96.jpg', title: 'Nhanh Chóng', desc: 'Đến tận nơi trong 30 phút, xử lý ngay' },
+    { image: '/images/z7820385581855_cfd13ca54fab17b4a90d5d3c01771803.jpg', title: 'Uy Tín', desc: 'Hơn 15 năm kinh nghiệm, 10,000+ khách hàng' },
+    { image: '/images/z7820385582746_b3e210f02d3833016a74d7a9248a5c5a.jpg', title: 'Minh Bạch', desc: 'Định giá công khai, thanh toán ngay' },
   ];
 
   const locations = [
@@ -112,13 +94,21 @@ export default function Home() {
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-lg border border-gray-200"
+                className="bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-[#155C8A] transition-colors"
               >
-                <div className="w-12 h-12 bg-[#155C8A] rounded-lg flex items-center justify-center mb-4">
-                  <benefit.icon className="w-6 h-6 text-white" />
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={benefit.image}
+                    alt={benefit.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.desc}</p>
+                <div className="p-4">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
+                  <p className="text-gray-600 text-sm">{benefit.desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -131,27 +121,27 @@ export default function Home() {
           <h2 className="text-2xl md:text-4xl font-bold text-center mb-6 text-gray-900">
             Dịch Vụ Thu Mua
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {services.map((service, index) => (
               <Link
                 key={index}
                 href={service.link}
-                className="bg-white rounded-lg p-6 border border-gray-200 hover:border-[#155C8A] transition-colors"
+                className="bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-[#155C8A] transition-colors group"
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#155C8A] rounded-lg flex items-center justify-center flex-shrink-0">
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex-grow">
-                    <h3 className="text-lg font-bold text-gray-900 mb-1">
-                      {service.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 mb-2">{service.desc}</p>
-                    {/* <div className="inline-flex items-center gap-1 bg-green-100 text-green-700 px-3 py-1 rounded text-sm font-semibold">
-                      <DollarSign className="w-4 h-4" />
-                      {service.price}
-                    </div> */}
-                  </div>
+                <div className="relative aspect-square overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
+                </div>
+                <div className="p-4 text-center">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-sm text-gray-600">{service.desc}</p>
                 </div>
               </Link>
             ))}
@@ -229,13 +219,13 @@ export default function Home() {
           <h2 className="text-2xl md:text-4xl font-bold text-center mb-6 text-gray-900">
             Cam Kết Của Chúng Tôi
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
             <div className="bg-white p-6 rounded-lg border border-gray-200">
               <div className="flex items-start gap-4">
                 <CheckCircle className="w-8 h-8 text-[#155C8A] flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="font-bold text-lg mb-2">Giá Cao Nhất Thị Trường</h3>
-                  <p className="text-gray-600 text-sm">Cam kết mua với giá cao hơn thị trường 10-20%, định giá công bằng và minh bạch</p>
+                  <h3 className="font-bold text-lg mb-2">Uy Tín và Chuyên Nghiệp</h3>
+                  <p className="text-gray-600 text-sm">Đảm bảo quy trình thu mua diễn ra minh bạch, nhanh chóng và hiệu quả.</p>
                 </div>
               </div>
             </div>
@@ -243,8 +233,8 @@ export default function Home() {
               <div className="flex items-start gap-4">
                 <CheckCircle className="w-8 h-8 text-[#155C8A] flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="font-bold text-lg mb-2">Thanh Toán Ngay</h3>
-                  <p className="text-gray-600 text-sm">Thanh toán bằng tiền mặt ngay tại chỗ, không chậm trễ, không phí ẩn</p>
+                  <h3 className="font-bold text-lg mb-2">Giá Cả Hợp Lý</h3>
+                  <p className="text-gray-600 text-sm">Đưa ra mức giá hợp lý, cạnh tranh, phù hợp với giá trị thực của sản phẩm.</p>
                 </div>
               </div>
             </div>
@@ -252,11 +242,19 @@ export default function Home() {
               <div className="flex items-start gap-4">
                 <CheckCircle className="w-8 h-8 text-[#155C8A] flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="font-bold text-lg mb-2">Dịch Vụ Tận Tâm</h3>
-                  <p className="text-gray-600 text-sm">Đội ngũ chuyên nghiệp, nhiệt tình, hỗ trợ tháo lắp và vận chuyển miễn phí</p>
+                  <h3 className="font-bold text-lg mb-2">Hỗ Trợ Tận Tâm</h3>
+                  <p className="text-gray-600 text-sm">Đội ngũ nhân viên nhiệt tình, sẵn sàng giải đáp mọi thắc mắc và hỗ trợ khách hàng mọi lúc, mọi nơi.</p>
                 </div>
               </div>
             </div>
+          </div>
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Với những ưu điểm vượt trội và quy trình làm việc chuyên nghiệp, dịch vụ thanh lý thu mua đồ cũ của chúng tôi đã và đang nhận được sự tin tưởng và ủng hộ từ đông đảo khách hàng tại Hà Nội.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              Hãy liên hệ ngay với chúng tôi qua số điện thoại <a href="tel:0919562568" className="text-[#155C8A] font-bold hover:underline">0919.562.568</a> để được hỗ trợ và tư vấn miễn phí.
+            </p>
           </div>
         </div>
       </section>

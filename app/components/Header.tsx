@@ -82,10 +82,10 @@ export default function Header() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className={`block px-6 py-3 font-medium transition-colors ${
+                  className={`block px-6 py-3 text-sm font-medium transition-colors ${
                     pathname === item.href
                       ? 'text-white bg-[#0f4a6f]'
-                      : 'text-white/90 hover:text-white hover:bg-[#0f4a6f]'
+                      : 'text-white hover:text-white hover:bg-[#0f4a6f]'
                   }`}
                 >
                   {item.label}

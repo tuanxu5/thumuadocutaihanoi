@@ -1,7 +1,8 @@
 'use client';
 
-import { Phone, MessageCircle, MapPin, Mail } from 'lucide-react';
+import { Phone, MessageCircle, MapPin } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -10,9 +11,21 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4 text-[#155C8A]">PHÚ GIA</h3>
+            <Link href="/" className="flex items-center gap-3 mb-4">
+              <Image
+                src="/logo.png"
+                alt="Phú Gia"
+                width={60}
+                height={60}
+                className="object-fill w-16 h-16"
+              />
+              <div>
+                <h3 className="text-2xl font-bold text-[#155C8A]">PHÚ GIA</h3>
+                <p className="text-sm text-white/80">Thu Mua Đồ Cũ Hà Nội</p>
+              </div>
+            </Link>
             <p className="text-white/80 mb-4">
-              Thu Mua Đồ Cũ Hà Nội - Dịch vụ uy tín, giá cao nhất thị trường.
+              Dịch vụ uy tín, giá cao nhất thị trường.
             </p>
             <div className="space-y-2 text-white/80">
               <div className="flex items-center gap-2">
