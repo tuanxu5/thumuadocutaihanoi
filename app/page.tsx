@@ -1,6 +1,6 @@
 'use client';
 
-import { Phone, MessageCircle, MapPin, Clock, CheckCircle } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, CheckCircle } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -14,45 +14,45 @@ export default function Home() {
   };
 
   const services = [
-    { 
+    {
       image: '/images/cate/dieuhoa.jpeg',
-      title: 'Điều Hòa', 
+      title: 'Điều Hòa',
       desc: 'Daikin, Panasonic, Mitsubishi, LG...',
       link: '/thu-mua-dieu-hoa'
     },
-    { 
+    {
       image: '/images/cate/tulanh.jpeg',
-      title: 'Tủ Lạnh', 
+      title: 'Tủ Lạnh',
       desc: 'Samsung, LG, Panasonic, Toshiba...',
       link: '/thu-mua-tu-lanh'
     },
-    { 
+    {
       image: '/images/cate/maygiat.jpeg',
-      title: 'Máy Giặt', 
+      title: 'Máy Giặt',
       desc: 'Electrolux, Samsung, LG, Aqua...',
       link: '/lien-he'
     },
-    { 
+    {
       image: '/images/cate/tivi.jpg',
-      title: 'Tivi & Điện Tử', 
+      title: 'Tivi & Điện Tử',
       desc: 'Smart TV, loa, amply, đầu karaoke...',
       link: '/lien-he'
     },
-    { 
+    {
       image: '/images/cate/tubep.jpg',
-      title: 'Tủ Bếp', 
+      title: 'Tủ Bếp',
       desc: 'Tủ bếp gỗ, tủ bếp inox, tủ bếp cũ...',
       link: '/lien-he'
     },
-    { 
+    {
       image: '/images/cate/sango.jpg',
-      title: 'Sàn Gỗ', 
+      title: 'Sàn Gỗ',
       desc: 'Sàn gỗ công nghiệp, sàn gỗ tự nhiên...',
       link: '/lien-he'
     },
-    { 
+    {
       image: '/images/cate/chaurua.jpg',
-      title: 'Chậu Rửa', 
+      title: 'Chậu Rửa',
       desc: 'Chậu rửa inox, chậu rửa đá, lavabo...',
       link: '/lien-he'
     },
@@ -121,6 +121,8 @@ export default function Home() {
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    loading="lazy"
+                    quality={90}
                   />
                   {/* Phone number badge */}
                   <div className="absolute top-2 right-2 bg-[#155C8A] text-white px-2 py-1 rounded text-xs md:text-sm font-bold shadow-lg flex items-center gap-1">
@@ -158,6 +160,8 @@ export default function Home() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                     sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
+                    loading="lazy"
+                    quality={90}
                   />
                   {/* Phone number badge */}
                   <div className="absolute top-2 right-2 bg-[#155C8A] text-white px-2 py-1 rounded text-xs md:text-sm font-bold shadow-lg flex items-center gap-1">
@@ -195,6 +199,8 @@ export default function Home() {
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                  loading="lazy"
+                  quality={90}
                 />
                 {/* Phone number badge */}
                 <div className="absolute top-2 right-2 bg-[#155C8A] text-white px-2 py-1 rounded text-xs md:text-sm font-bold shadow-lg flex items-center gap-1">
@@ -311,6 +317,8 @@ export default function Home() {
                   alt="Bảng giá thu mua"
                   fill
                   className="object-cover"
+                  loading="lazy"
+                  quality={90}
                 />
                 {/* Phone number badge */}
                 <div className="absolute top-2 right-2 bg-[#155C8A] text-white px-2 py-1 rounded text-xs md:text-sm font-bold shadow-lg flex items-center gap-1">
@@ -330,6 +338,8 @@ export default function Home() {
                   alt="Kinh nghiệm bán tủ lạnh"
                   fill
                   className="object-cover"
+                  loading="lazy"
+                  quality={90}
                 />
                 {/* Phone number badge */}
                 <div className="absolute top-2 right-2 bg-[#155C8A] text-white px-2 py-1 rounded text-xs md:text-sm font-bold shadow-lg flex items-center gap-1">
@@ -349,6 +359,8 @@ export default function Home() {
                   alt="Thương hiệu điều hòa"
                   fill
                   className="object-cover"
+                  loading="lazy"
+                  quality={90}
                 />
                 {/* Phone number badge */}
                 <div className="absolute top-2 right-2 bg-[#155C8A] text-white px-2 py-1 rounded text-xs md:text-sm font-bold shadow-lg flex items-center gap-1">
