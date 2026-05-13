@@ -138,77 +138,7 @@ export default function LienHe() {
         </div>
       </section>
 
-      {/* Contact Form Section */}
-      <section className="container mx-auto px-4 py-12 mb-12">
-        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-blue-100 max-w-3xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-              Gửi Tin Nhắn Cho Chúng Tôi
-            </h2>
-            <p className="text-lg text-slate-600">
-              Để lại thông tin, chúng tôi sẽ liên hệ lại trong thời gian sớm nhất
-            </p>
-          </div>
-          <form className="space-y-6">
-            <div>
-              <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">
-                Họ và Tên *
-              </label>
-              <input
-                type="text"
-                id="name"
-                className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
-                placeholder="Nhập họ và tên của bạn"
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="phone" className="block text-sm font-semibold text-slate-700 mb-2">
-                Số Điện Thoại *
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
-                placeholder="Nhập số điện thoại"
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="address" className="block text-sm font-semibold text-slate-700 mb-2">
-                Địa Chỉ
-              </label>
-              <input
-                type="text"
-                id="address"
-                className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
-                placeholder="Nhập địa chỉ của bạn"
-              />
-            </div>
-            <div>
-              <label htmlFor="message" className="block text-sm font-semibold text-slate-700 mb-2">
-                Nội Dung *
-              </label>
-              <textarea
-                id="message"
-                rows={5}
-                className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all resize-none"
-                placeholder="Mô tả đồ cần bán hoặc câu hỏi của bạn..."
-                required
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-full hover:from-blue-700 hover:to-indigo-700 transition-all shadow-xl hover:shadow-2xl transform hover:scale-105 text-lg font-bold"
-            >
-              Gửi Tin Nhắn
-            </button>
-          </form>
-          <p className="text-center text-sm text-slate-500 mt-6">
-            Hoặc liên hệ trực tiếp qua hotline: <strong className="text-blue-600">0919.562.568</strong>
-          </p>
-        </div>
-      </section>
+
 
       {/* CTA Section */}
       <section className="container mx-auto px-4 py-12 mb-12">

@@ -16,51 +16,51 @@ export default function TinTuc() {
   const articles = [
     {
       id: 1,
-      title: 'Bảng Giá Thu Mua Điều Hòa Cũ Tháng 5/2026',
-      excerpt: 'Cập nhật bảng giá thu mua điều hòa cũ mới nhất tháng 5/2026. Giá thu mua các dòng điều hòa Daikin, Panasonic, Mitsubishi...',
+      title: 'Thu Mua Điều Hòa Cũ Giá Cao',
+      excerpt: 'Thu mua điều hòa cũ các hãng Daikin, Panasonic, Mitsubishi, LG, Samsung. Tháo lắp miễn phí, thanh toán ngay',
       image: '/images/z7820385588253_d8f26d37af7b05dacb08086c5cb456d9.jpg',
       date: '13/05/2026',
-      category: 'Bảng Giá',
+      category: 'Thu Mua',
     },
     {
       id: 2,
-      title: 'Kinh Nghiệm Bán Tủ Lạnh Cũ Giá Cao',
-      excerpt: 'Chia sẻ những kinh nghiệm giúp bạn bán tủ lạnh cũ với giá cao nhất. Cách vệ sinh, bảo quản và thời điểm bán tốt nhất...',
+      title: 'Thu Mua Tủ Lạnh Cũ Giá Cao',
+      excerpt: 'Thu mua tủ lạnh cũ các hãng Samsung, LG, Panasonic, Toshiba. Vận chuyển miễn phí, thanh toán ngay',
       image: '/images/z7820385601395_19c7302260aed622b241861b5127027a.jpg',
-      date: '10/05/2026',
-      category: 'Kinh Nghiệm',
+      date: '12/05/2026',
+      category: 'Thu Mua',
     },
     {
       id: 3,
-      title: 'Top 5 Thương Hiệu Điều Hòa Giữ Giá Nhất',
-      excerpt: 'Những thương hiệu điều hòa nào giữ giá tốt nhất khi bán lại? Tìm hiểu ngay để có lựa chọn thông minh khi mua mới...',
-      image: '/images/z7820385590552_23391ae8f04cf543ca3480bb652711a4.jpg',
-      date: '08/05/2026',
-      category: 'Đánh Giá',
+      title: 'Thu Mua Máy Giặt Cũ Giá Cao',
+      excerpt: 'Thu mua máy giặt cũ các hãng Electrolux, Samsung, LG, Aqua. Vận chuyển miễn phí, thanh toán ngay',
+      image: '/images/z7820385604729_b5ac5cbfce2ad60dd77957eb91537934.jpg',
+      date: '11/05/2026',
+      category: 'Thu Mua',
     },
     {
       id: 4,
-      title: 'Quy Trình Thu Mua Đồ Cũ Chuyên Nghiệp',
-      excerpt: 'Tìm hiểu quy trình thu mua đồ cũ chuyên nghiệp của chúng tôi. Từ khâu tiếp nhận, định giá đến thanh toán...',
-      image: '/images/z7820385569389_2fd7298c2a7516caa686ec5cc22c18d8.jpg',
-      date: '05/05/2026',
-      category: 'Hướng Dẫn',
+      title: 'Bảng Giá Thu Mua Điều Hòa Mới Nhất',
+      excerpt: 'Cập nhật bảng giá thu mua điều hòa cũ mới nhất. Giá thu mua các dòng điều hòa cao cấp',
+      image: '/images/z7820385590552_23391ae8f04cf543ca3480bb652711a4.jpg',
+      date: '10/05/2026',
+      category: 'Bảng Giá',
     },
     {
       id: 5,
-      title: 'Cách Nhận Biết Điều Hòa Inverter Thật Giả',
-      excerpt: 'Hướng dẫn chi tiết cách nhận biết điều hòa Inverter thật giả để tránh mua phải hàng kém chất lượng...',
-      image: '/images/z7820385599894_694c988967a17bf0c828d5d78d3573a0.jpg',
-      date: '03/05/2026',
-      category: 'Kiến Thức',
+      title: 'Bảng Giá Thu Mua Tủ Lạnh Mới Nhất',
+      excerpt: 'Cập nhật bảng giá thu mua tủ lạnh cũ mới nhất. Giá thu mua tủ lạnh các hãng nổi tiếng',
+      image: '/images/z7820385575535_671afa6b62a86b35afaf3a99609fcc96.jpg',
+      date: '09/05/2026',
+      category: 'Bảng Giá',
     },
     {
       id: 6,
-      title: 'Xu Hướng Thị Trường Đồ Cũ 2026',
-      excerpt: 'Phân tích xu hướng thị trường đồ cũ năm 2026. Những mặt hàng nào đang được ưa chuộng và có giá trị cao...',
-      image: '/images/z7820385575535_671afa6b62a86b35afaf3a99609fcc96.jpg',
-      date: '01/05/2026',
-      category: 'Thị Trường',
+      title: 'Bảng Giá Thu Mua Máy Giặt Mới Nhất',
+      excerpt: 'Cập nhật bảng giá thu mua máy giặt cũ mới nhất. Giá thu mua máy giặt các loại',
+      image: '/images/z7820385610885_86571c1fa99c92720b11574a193586a5.jpg',
+      date: '08/05/2026',
+      category: 'Bảng Giá',
     },
   ];
 
@@ -144,9 +144,11 @@ export default function TinTuc() {
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
                 {articles[0].excerpt}
               </p>
-              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-full hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold w-fit">
-                Đọc Tiếp
-              </button>
+              <Link href={`/tin-tuc/${articles[0].id}`}>
+                <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-full hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold w-fit">
+                  Đọc Tiếp
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -156,9 +158,10 @@ export default function TinTuc() {
       <section className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {articles.slice(1).map((article) => (
-            <div
+            <Link
               key={article.id}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 border border-blue-100 group"
+              href={`/tin-tuc/${article.id}`}
+              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 border border-blue-100 group block"
             >
               <div className="relative aspect-video overflow-hidden">
                 <Image
@@ -185,12 +188,12 @@ export default function TinTuc() {
                 <p className="text-slate-600 mb-4 line-clamp-3 text-sm leading-relaxed">
                   {article.excerpt}
                 </p>
-                <button className="text-blue-600 hover:text-blue-700 font-semibold text-sm flex items-center gap-2 group-hover:gap-3 transition-all">
+                <span className="text-blue-600 hover:text-blue-700 font-semibold text-sm flex items-center gap-2 group-hover:gap-3 transition-all">
                   Đọc Thêm
                   <span>→</span>
-                </button>
+                </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
